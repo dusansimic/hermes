@@ -1,0 +1,41 @@
+{
+	"name": "hermes",
+	"productName": "Hermes",
+	"version": "0.0.0",
+	"description": "Elegant WhatsApp desktop app.",
+	"main": "index.js",
+	"repository": "https://github.com/dusansimic/hermes",
+	"author": "Dušan Simić <dusan.simic1810@gmail.com> (http://dusansimic.me)",
+	"license": "MIT",
+	"dependencies": {
+		"electron-store": "^2.0.0"
+	},
+	"devDependencies": {
+		"electron": "^2.0.2",
+		"electron-builder": "20.13.4",
+		"xo": "^0.21.1"
+	},
+	"scripts": {
+		"start": "electron .",
+		"test": "xo",
+		"dist": "electron-builder --linux",
+		"dist:linux": "electron-builder --linux"
+	},
+	"xo": {
+		"envs": [
+			"node",
+			"browser"
+		]
+	},
+	"build": {
+		"files": [
+			"**/*"
+		],
+		"appId": "me.dusansimic.hermes",
+		"linux": {
+			"target": [
+				"AppImage"
+			]
+		}
+	}
+}
